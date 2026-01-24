@@ -26,11 +26,10 @@
         <nav class="navbar">
             <a href="#" class="logo">The Ethereal Petal.</a>
             <ul class="nav-links">
-                <li><a href="#">Fresh Blooms</a></li>
-                <li><a href="#">Dried</a></li>
-                <li><a href="#">Subscriptions</a></li>
-                <li><a href="#" class="cart-link">Cart (0)</a></li>
-            </ul>
+                <li><a href="fresh-blooms.html">Fresh Blooms</a></li>
+                <li><a href="dried.html">Dried</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="cart.html">Cart (0)</a></li>            </ul>
         </nav>
     </header>
 
@@ -119,7 +118,7 @@
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./sw.js')
+                navigator.serviceWorker.register('./app.js')
                     .then(registration => {
                         console.log('ServiceWorker registered with scope:', registration.scope);
                     })

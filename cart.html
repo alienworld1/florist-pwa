@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart | The Ethereal Petal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">The Ethereal Petal.</a>
+            <ul class="nav-links">
+                <li><a href="fresh-blooms.html">Fresh Blooms</a></li>
+                <li><a href="dried.html">Dried</a></li>
+                <li><a href="subscriptions.html">Subscriptions</a></li>
+                <li><a href="cart.html" style="color:var(--text-primary);">Cart (2)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div style="padding: 4rem 2rem; text-align: center;">
+            <h1 style="font-family: var(--font-heading); font-size: 3rem; font-weight:300;">Your Selection</h1>
+        </div>
+
+        <div class="cart-container">
+            <!-- Left Side: Items -->
+            <div class="cart-items">
+                
+                <!-- Item 1 -->
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1712532223485-a309e7611ec3?q=80&w=687&auto=format&fit=crop" alt="Rose Bouquet" class="cart-thumb">
+                    <div class="item-details">
+                        <h4>Dusty Rose Symphony</h4>
+                        <p style="color:var(--text-secondary); font-size: 0.9rem;">Size: Standard</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                    <div class="item-price">$85.00</div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="cart-item">
+                    <img src="https://images.unsplash.com/photo-1596073419667-9d77d59f033f?q=80&w=200" alt="Eucalyptus" class="cart-thumb">
+                    <div class="item-details">
+                        <h4>Sage Eucalyptus</h4>
+                        <p style="color:var(--text-secondary); font-size: 0.9rem;">Bundle: Large</p>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                    <div class="item-price">$30.00</div>
+                </div>
+
+            </div>
+
+            <!-- Right Side: Summary -->
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span>$115.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>$15.00</span>
+                </div>
+                <div class="summary-total">
+                    <span>Total</span>
+                    <span>$130.00</span>
+                </div>
+                <br>
+                <a href="#" class="btn-primary" style="display:block; text-align:center;">Checkout</a>
+                <p style="text-align:center; font-size:0.8rem; color:var(--text-secondary); margin-top:1rem;">Secure checkout powered by Stripe.</p>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
