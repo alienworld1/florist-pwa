@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ethereal Petal | Boutique Florist</title>
+    <!-- Importing Google Fonts directly for the immediate design effect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Mobile Theme Color (Matches your --bg-color) -->
+    <meta name="theme-color" content="#FDFBF7">
+    
+    <!-- iOS Support (Optional but recommended) -->
+    <link rel="apple-touch-icon" href="https://placehold.co/192x192/8F9E8B/FDFBF7?text=EP">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+</head>
+<body>
+
+    <!-- Semantic Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <a href="#" class="logo">The Ethereal Petal.</a>
+            <ul class="nav-links">
+                <li><a href="#">Fresh Blooms</a></li>
+                <li><a href="#">Dried</a></li>
+                <li><a href="#">Subscriptions</a></li>
+                <li><a href="#" class="cart-link">Cart (0)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section: Overlapping Layout -->
+        <section class="hero">
+            <div class="hero-grid">
+                <div class="hero-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?q=80&w=2000&auto=format&fit=crop" alt="Artistic floral arrangement in soft light" class="hero-img">
+                </div>
+                <div class="hero-content">
+                    <span class="eyebrow">Seasonal Collection 2026</span>
+                    <h1>Nature, Curated <br> & Wildly Elegant.</h1>
+                    <p>We don't just arrange flowers; we cultivate atmosphere. Experience the whimsical side of botany with our hand-tied, organic stems.</p>
+                    <a href="#shop" class="btn-primary">Explore The Garden</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Section: Asymmetrical Masonry Grid -->
+        <section id="shop" class="collection">
+            <div class="section-header">
+                <h2>The Conservatory</h2>
+                <p>Hand-picked stems for the modern romantic.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1: Large Feature -->
+                <article class="product-card large-feature">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1712532223485-a309e7611ec3?q=80&w=687&auto=format&fit=crop" alt="Dusty Rose Bouquet" loading="lazy">
+                        <span class="tag">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Dusty Rose Symphony</h3>
+                        <span class="price">$85.00</span>
+                    </div>
+                </article>
+
+                <!-- Product 2: Vertical -->
+                <article class="product-card vertical">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1631407779166-86952be9dbd7?q=80&w=1171&auto=format&fit=crop" alt="White Lilies" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Midnight Lily</h3>
+                        <span class="price">$60.00</span>
+                    </div>
+                </article>
+
+                <!-- Product 3: Standard -->
+                <article class="product-card standard">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1663798563258-0ec9bf32314a?q=80&w=735&auto=format&fit=crop" alt="Wildflower arrangement" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Meadow Whisper</h3>
+                        <span class="price">$45.00</span>
+                    </div>
+                </article>
+
+                <!-- Product 4: Standard -->
+                <article class="product-card standard">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1596073419667-9d77d59f033f?q=80&w=800&auto=format&fit=crop" alt="Eucalyptus Bundle" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Sage Eucalyptus</h3>
+                        <span class="price">$30.00</span>
+                    </div>
+                </article>
+
+                <!-- Product 5: Wide Feature -->
+                <article class="product-card wide-feature">
+                    <div class="image-frame">
+                        <img src="https://images.unsplash.com/photo-1668365203812-62e818b7f979?q=80&w=1170&auto=format&fit=crop" alt="Dried Flower Arrangement" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <h3>Autumn Eternal (Dried)</h3>
+                        <span class="price">$95.00</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered with scope:', registration.scope);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed:', err);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>
