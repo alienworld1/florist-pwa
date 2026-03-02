@@ -17,7 +17,7 @@
                 <li><a href="fresh-blooms.html">Fresh Blooms</a></li>
                 <li><a href="dried.html">Dried</a></li>
                 <li><a href="subscriptions.html">Subscriptions</a></li>
-                <li><a href="cart.html" style="color:var(--text-primary);">Cart (2)</a></li>
+                <li><a href="#" class="cart-link" id="cart-trigger">Cart (<span id="cart-count">0</span>)</a></li> 
             </ul>
         </nav>
     </header>
@@ -75,6 +75,33 @@
             </div>
         </div>
     </main>
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <aside class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Garden</h2>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        
+        <!-- Items injected here via JS -->
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- Empty State Template -->
+            <div class="empty-cart-msg">
+                <p>Your garden is empty.</p>
+                <button class="btn-primary" onclick="closeCart()">Start Planting</button>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </aside>
+    <div id="toast" class="toast hidden">Item added to garden</div>
+    <script src="script.js"></script>
+
 
 </body>
 </html>
